@@ -16,7 +16,6 @@ mkShell {
     bazel
     git
     nix
-    openjdk11
     python3
     which
     # For stack_install.
