@@ -11,7 +11,7 @@ jobs:
       uses: nix-actions/cache-install@v1.0.6
       with:
         key: nix-${{ hashFiles('shell.nix') }}
-        nix_file: 'shell.nix'
+        nix_file: 'buildshell.nix'
     - uses: cachix/cachix-action@v8
       with:
         name: codygman5
