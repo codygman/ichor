@@ -13,7 +13,7 @@ jobs:
         nix_path: nixpkgs=https://github.com/NixOS/nixpkgs/archive/6625284c397b44bc9518a5a1567c1b5aae455c08.tar.gz
     - uses: cachix/cachix-action@v8
       with:
-        name: codygman
+        name: itprotv-bazel-test
         # If you chose signing key for write access
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
         # If you chose API tokens for write access OR if you have a private cache
