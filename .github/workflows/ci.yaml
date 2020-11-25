@@ -13,7 +13,7 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: /nix/store
-	key: constant
+        key: constant
     - uses: cachix/cachix-action@v8
       with:
         name: codygman5
