@@ -11,7 +11,7 @@ jobs:
     - name: Cache install Nix packages
       uses: nix-actions/cache-install@v1.0.6
       with:
-        key: nix-${{ hashFiles('shell.nix') }}
+        key: nix-${{ hashFiles('buildshell.nix') }}
         nix_file: 'buildshell.nix'
     - run: ls /nix/store
     - run: nix-shell --run "echo OK"
