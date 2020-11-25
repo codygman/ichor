@@ -22,6 +22,6 @@ jobs:
       uses: actions/cache@v2
       with:
         path: "/home/runner/.cache/bazel"
-        key: bazel
+        key: bazel2
     - run: nix-shell --run "echo OK"
-    - run: nix-shell --pure --run "bazel build ..."
+    - run: nix-shell --pure --run "bazel build ...; bazel shutdown"
