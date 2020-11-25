@@ -32,7 +32,7 @@ data Mod3 =
   | Mod3_260 | Mod3_261 | Mod3_262 | Mod3_263 | Mod3_264 | Mod3_265 | Mod3_266 | Mod3_267 | Mod3_268 | Mod3_269
   | Mod3_270 | Mod3_271 | Mod3_272 | Mod3_273 | Mod3_274 | Mod3_275 | Mod3_276 | Mod3_277 | Mod3_278 | Mod3_279
   | Mod3_280 | Mod3_281 | Mod3_282 | Mod3_283 | Mod3_284 | Mod3_285 | Mod3_286 | Mod3_287 | Mod3_288 | Mod3_289
-  | Mod3_290 | Mod3_291 | Mod3_292 | Mod3_293 | Mod3_294 | Mod3_295 | Mod3_296 | Mod3_297 | Mod3_298 | Mod3_299
+  | Mod3_290 | Mod3_291 | Mod3_292 | Mod3_293 | Mod3_294 | Mod3_295 | Mod3_296 | Mod3_297 | Mod3_298 | Mod3_299 | Mod3_300
    deriving Generic
 
 mod3 :: Int

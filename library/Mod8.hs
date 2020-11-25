@@ -32,7 +32,7 @@ data Mod8 =
   | Mod8_260 | Mod8_261 | Mod8_262 | Mod8_263 | Mod8_264 | Mod8_265 | Mod8_266 | Mod8_267 | Mod8_268 | Mod8_269
   | Mod8_270 | Mod8_271 | Mod8_272 | Mod8_273 | Mod8_274 | Mod8_275 | Mod8_276 | Mod8_277 | Mod8_278 | Mod8_279
   | Mod8_280 | Mod8_281 | Mod8_282 | Mod8_283 | Mod8_284 | Mod8_285 | Mod8_286 | Mod8_287 | Mod8_288 | Mod8_289
-  | Mod8_290 | Mod8_291 | Mod8_292 | Mod8_293 | Mod8_294 | Mod8_295 | Mod8_296 | Mod8_297 | Mod8_298 | Mod8_299
+  | Mod8_290 | Mod8_291 | Mod8_292 | Mod8_293 | Mod8_294 | Mod8_295 | Mod8_296 | Mod8_297 | Mod8_298 | Mod8_299 | Mod8_300
    deriving Generic
 
 mod8 :: Int

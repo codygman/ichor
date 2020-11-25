@@ -32,7 +32,7 @@ data Mod5 =
   | Mod5_260 | Mod5_261 | Mod5_262 | Mod5_263 | Mod5_264 | Mod5_265 | Mod5_266 | Mod5_267 | Mod5_268 | Mod5_269
   | Mod5_270 | Mod5_271 | Mod5_272 | Mod5_273 | Mod5_274 | Mod5_275 | Mod5_276 | Mod5_277 | Mod5_278 | Mod5_279
   | Mod5_280 | Mod5_281 | Mod5_282 | Mod5_283 | Mod5_284 | Mod5_285 | Mod5_286 | Mod5_287 | Mod5_288 | Mod5_289
-  | Mod5_290 | Mod5_291 | Mod5_292 | Mod5_293 | Mod5_294 | Mod5_295 | Mod5_296 | Mod5_297 | Mod5_298 | Mod5_299
+  | Mod5_290 | Mod5_291 | Mod5_292 | Mod5_293 | Mod5_294 | Mod5_295 | Mod5_296 | Mod5_297 | Mod5_298 | Mod5_299 | Mod5_300
    deriving Generic
 
 mod5 :: Int
