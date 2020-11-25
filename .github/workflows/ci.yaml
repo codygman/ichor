@@ -14,5 +14,5 @@ jobs:
         key: nix-${{ hashFiles('buildshell.nix') }}
         nix_file: 'buildshell.nix'
     - run: ls /nix/store
-    - run: nix-shell --run "echo OK"
+    - run: nix-shell --pure --run "echo OK"
     - run: nix-shell --pure --run "bazel build ..."
