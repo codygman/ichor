@@ -1,2 +1,1 @@
-common --host_javabase=@local_jdk//:jdk
 try-import .bazelrc.local
