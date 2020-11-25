@@ -15,3 +15,11 @@ library
   exposed-modules:
       Foo
       Bar
+      Mod1
+      Mod2
+      Mod3
+      Mod4
+      Mod5
+      Mod6
+      Mod7
+      Mod8
