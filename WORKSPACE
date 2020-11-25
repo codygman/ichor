@@ -94,6 +94,7 @@ haskell_register_ghc_nixpkgs(
     repositories = {"nixpkgs": "@nixpkgs"},
     version = "8.10.1",
     compiler_flags = [
+        "-XDeriveGeneric",
         "-Werror",
         "-Wall",
         "-Wcompat",
