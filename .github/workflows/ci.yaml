@@ -4,29 +4,19 @@ env:
   CABAL_DIR: ${{ github.workspace }}/.cabal
 jobs:
   build:
-    strategy:
-      matrix:
-        os: [ ubuntu-18.04 ]
-        ghc: [ 8.10.2 ]
-        cabal: [ 3.2.0.0 ]
-    runs-on: ${{ matrix.os }}
+tests:
+    runs-on: ubuntu-latest
     steps:
-      - run: env
-      - uses: actions/checkout@v2
-      - id: setup-haskell
-        uses: actions/setup-haskell@v1
-        with:
-          ghc-version: ${{ matrix.ghc }}
-          cabal-version: ${{ matrix.cabal }}
-      - run: cabal freeze --verbose=3
-      - uses: actions/cache@v2
-        with:
-          path: |
-            ${{ github.workspace }}/.cabal
-            dist-newstyle
-          key: d-${{ matrix.os }}-${{ matrix.ghc }}-${{ matrix.cabal }}-${{ hashFiles('cabal.project.freeze') }}
-          restore-keys: |
-            d-${{ matrix.os }}-${{ matrix.ghc }}-${{ matrix.cabal }}-
-            d-${{ matrix.os }}-${{ matrix.ghc }}-
-      - run: cabal build
-      - run: cabal build
+    - uses: actions/checkout@v2.3.4
+    - uses: cachix/install-nix-action@v12
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+    - uses: cachix/cachix-action@v8
+      with:
+        name: codygman5
+        # If you chose signing key for write access
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+        # If you chose API tokens for write access OR if you have a private cache
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+    - run: nix-build
+    - run: nix-shell --run "echo OK"
