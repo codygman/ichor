@@ -6,11 +6,18 @@ load(
     "haskell_binary",
 )
 
+ghc_plugin(
+    name = "autoexporter_plugin",
+    module = "Autoexporter",
+    deps = ["@stackage//:autoexporter"],
+)
+
 haskell_binary(
     name = "ichor",
     srcs = glob(['executable/*.hs',
                  'library/*.hs'
 		 ]),
+    plugins = [":autoexporter_plugin"],
     deps = [
         "@stackage//:Cabal",
         "@stackage//:base",
