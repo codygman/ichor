@@ -14,3 +14,4 @@ executable ichor:
 library
   exposed-modules:
       Foo
+      Bar
