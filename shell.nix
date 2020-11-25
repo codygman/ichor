@@ -13,7 +13,6 @@ mkShell {
   LANG="C.UTF-8";
 
   buildInputs = [
-    #autoexporter
     bazel
     git
     nix

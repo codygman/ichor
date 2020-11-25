@@ -1,0 +1,17 @@
+require-stack-version: ">= 1.6"
+
+resolver: lts-16.5
+compiler: ghc-8.10
+
+packages:
+- .
+
+extra-deps:
+# Pinning Cabal and parsec here prevents stack from building a newer
+# cabal than the one delivered with ghc.
+- Cabal-3.2.0.0
+- parsec-3.1.14.0
+
+nix:
+  shell-file: shell-stack.nix
+  path: ["nixpkgs=./nixpkgs.nix"]
